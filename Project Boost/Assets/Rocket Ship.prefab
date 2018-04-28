@@ -11,6 +11,24 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1256908537552552}
   m_IsPrefabParent: 1
+--- !u!1 &1053870961649042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4342138821858864}
+  - component: {fileID: 33880758595732666}
+  - component: {fileID: 65457593356305556}
+  - component: {fileID: 23174691045088904}
+  m_Layer: 0
+  m_Name: Rocket Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1256908537552552
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +61,7 @@ GameObject:
   - component: {fileID: 65227075635279072}
   - component: {fileID: 23842683738747860}
   m_Layer: 0
-  m_Name: Rocket Body
+  m_Name: Rocket Body (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,24 +80,6 @@ GameObject:
   - component: {fileID: 23682458631350444}
   m_Layer: 0
   m_Name: Starboard booster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1839024469943384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4323287330322986}
-  - component: {fileID: 33856197853773340}
-  - component: {fileID: 135814110657630744}
-  - component: {fileID: 23580262885837588}
-  m_Layer: 0
-  m_Name: Nose Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,25 +113,25 @@ Transform:
   m_LocalPosition: {x: 0.03, y: 2.89, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4661074425269762}
+  - {fileID: 4342138821858864}
   - {fileID: 4544758413210486}
   - {fileID: 4758014842421134}
-  - {fileID: 4323287330322986}
+  - {fileID: 4661074425269762}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.001, y: 0, z: -0.019000001}
---- !u!4 &4323287330322986
+--- !u!4 &4342138821858864
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839024469943384}
+  m_GameObject: {fileID: 1053870961649042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000050371455, y: 1.4200002, z: 0.0000000029817215}
-  m_LocalScale: {x: 1, y: 1.6285101, z: 1}
+  m_LocalPosition: {x: -0.000000050371455, y: -0.037999958, z: 0.0000000029817215}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 4122942307898640}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4544758413210486
 Transform:
@@ -152,12 +152,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660574507772754}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000050371455, y: -0.037999958, z: 0.0000000029817215}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 6.1537928e-12, w: 1}
+  m_LocalPosition: {x: -0, y: 1.835, z: -0}
+  m_LocalScale: {x: 1, y: 0.66898423, z: 1}
   m_Children: []
   m_Father: {fileID: 4122942307898640}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4758014842421134
 Transform:
@@ -172,12 +172,12 @@ Transform:
   m_Father: {fileID: 4122942307898640}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23580262885837588
+--- !u!23 &23174691045088904
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839024469943384}
+  m_GameObject: {fileID: 1053870961649042}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -220,7 +220,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7e14032f20e1b1f4da5aa5acd88a9beb, type: 2}
+  - {fileID: 2100000, guid: 876e8953dd12cf44c90d018ccd9518ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,7 +288,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7e14032f20e1b1f4da5aa5acd88a9beb, type: 2}
+  - {fileID: 2100000, guid: 876e8953dd12cf44c90d018ccd9518ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,13 +329,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792225618020516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33856197853773340
+--- !u!33 &33880758595732666
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839024469943384}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 1053870961649042}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54360780600131416
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -369,6 +369,18 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660574507772754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65457593356305556
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053870961649042}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -506,15 +518,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rcsThrust: 250
   MainThrust: 1
---- !u!135 &135814110657630744
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839024469943384}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

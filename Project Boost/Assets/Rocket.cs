@@ -11,15 +11,17 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource RocketSound;
    	// Use this for initialization
-	void Start ()
+	void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         RocketSound = GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+
         Thrust();
         Rotation();
         
@@ -28,6 +30,8 @@ public class Rocket : MonoBehaviour
 
     private void Thrust()
     {
+
+
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
         {
             rigidBody.AddRelativeForce(Vector3.up * MainThrust);
@@ -44,8 +48,6 @@ public class Rocket : MonoBehaviour
         }
 
     }
-
-
 
     private void Rotation()
     {
