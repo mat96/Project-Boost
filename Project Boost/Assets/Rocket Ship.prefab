@@ -490,3 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rcsThrust: 250
   MainThrust: 250
+  reloadTime: 1
+  mainEngine: {fileID: 8300000, guid: 4ed7bb3b98203a14baaac9af48f420b6, type: 3}
+  onDeath: {fileID: 8300000, guid: 780c5b9b6f6b46e4fbc17f60face3c33, type: 3}
+  success: {fileID: 8300000, guid: 6e289ca5221d6954bb508d247b82cf7e, type: 3}
