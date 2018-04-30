@@ -38,10 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4122942307898640}
   - component: {fileID: 82100735295822818}
-  - component: {fileID: 114096004706699416}
   - component: {fileID: 54360780600131416}
-  - component: {fileID: 114497062496929594}
-  - component: {fileID: 114640521503103916}
+  - component: {fileID: 114096004706699416}
   m_Layer: 0
   m_Name: Rocket Ship
   m_TagString: Untagged
@@ -343,7 +341,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256908537552552}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 5
   m_Drag: 0.6
   m_AngularDrag: 0.5
   m_UseGravity: 1
@@ -490,31 +488,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87fae40aaf7feaf489497844e81b5264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rcsThrust: 10
-  MainThrust: 250
---- !u!114 &114497062496929594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256908537552552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87fae40aaf7feaf489497844e81b5264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rcsThrust: 200
-  MainThrust: 0.2
---- !u!114 &114640521503103916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256908537552552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87fae40aaf7feaf489497844e81b5264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   rcsThrust: 250
-  MainThrust: 1
+  MainThrust: 250

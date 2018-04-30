@@ -27,10 +27,28 @@ public class Rocket : MonoBehaviour
         
 	}
 
+    void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                 print("OK"); //TODO remove
+                break;
+            case "Fuel":   // TODO add fuel tag
+                print("Fuel");
+                break;
+            default:
+                print("Dead");
+                // kill player
+                break;
+                    
+        }
+
+    }
+
 
     private void Thrust()
     {
-
 
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
         {
@@ -42,7 +60,18 @@ public class Rocket : MonoBehaviour
             }
 
         }
-        else
+       
+        if (Input.GetKey(KeyCode.S))  //TODO maybe add another key for Rocket Break
+        {
+            rigidBody.AddRelativeForce(Vector3.up * -MainThrust);
+
+            if (!RocketSound.isPlaying)
+            {
+                RocketSound.Play();
+            }
+
+        }
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
         {
             RocketSound.Stop();
         }
