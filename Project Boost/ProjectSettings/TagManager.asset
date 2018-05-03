@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Friendly
   - Dead
+  - AIRocket
   layers:
   - Default
   - TransparentFX
