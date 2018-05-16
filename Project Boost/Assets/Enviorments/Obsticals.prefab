@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23329817682534000}
   - component: {fileID: 114065446453733398}
   m_Layer: 0
-  m_Name: Launch Pad (Also Origin)
+  m_Name: Obsticals
   m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,6 +56,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 876e8953dd12cf44c90d018ccd9518ae, type: 2}
   m_StaticBatchInfo:

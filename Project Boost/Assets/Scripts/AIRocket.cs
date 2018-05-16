@@ -11,12 +11,10 @@ public class AIRocket : MonoBehaviour
 
     Rigidbody rigidBody;
     
-    Vector3 currentLocation;
 	// Use this for initialization
 	void Start ()
     {
                
-        currentLocation = transform.position;
 	}
 	
 	// Update is called once per frame

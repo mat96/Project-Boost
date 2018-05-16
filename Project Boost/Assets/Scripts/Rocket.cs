@@ -4,15 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
-    [SerializeField] float rcsThrust = 250f; // Changable in the editor
-    [SerializeField] float MainThrust = 250f; // Changable in the editor
+    [SerializeField] float rcsThrust = 250f; 
+    [SerializeField] float MainThrust = 250f; 
     [SerializeField] float levelLoadDelay = 1f;
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip onDeath;
-    [SerializeField] AudioClip success;
+    //[SerializeField] AudioClip success;
 
     [SerializeField] ParticleSystem mainEngineParticles;
-    [SerializeField] ParticleSystem successParticles;
+  //  [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem deathParticles;
 
   
@@ -65,13 +65,14 @@ public class Rocket : MonoBehaviour
 
                     break;
                 case "Finish":
-                    StartSuccessSequence();
-                    break;
+                audioSource.Stop();
+                state = State.Transcending;
+                break;
                 default:  // For when the player dies
                     StartDeathSequence();
                     break;
             }
-
+          
     }
 
     private void StartDeathSequence()
@@ -82,44 +83,14 @@ public class Rocket : MonoBehaviour
         audioSource.PlayOneShot(onDeath);
         deathParticles.Play();
         Invoke("ReloadLevel", levelLoadDelay);
-        // kill player
-    }
-
-    private void StartSuccessSequence()
-    {
-        audioSource.Stop();
-        state = State.Transcending;
-        successParticles.Play();
-        audioSource.PlayOneShot(success);
-        Invoke("LoadNextScene", levelLoadDelay); // parameterise time
+        
     }
 
     private void ReloadLevel()
     {
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
        state = State.Alive;
-        SceneManager.LoadScene(0); // TODO make this reload current level
-    }
-
-    private void LoadNextScene()
-    {
-        int ScenesInGame = SceneManager.sceneCountInBuildSettings;
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        int NextSceneIndex = currentSceneIndex + 1;
-        print(ScenesInGame);
-        state = State.Alive;
-
-        if (NextSceneIndex < ScenesInGame)
-        {
-            SceneManager.LoadScene(NextSceneIndex);
-        }
-        else
-        {
-            // Loads Scene 1 when game is completed
-            SceneManager.LoadScene(0);
-        }
-     
-
+        SceneManager.LoadScene(currentLevel); 
     }
 
     private void Thrust()
@@ -137,7 +108,7 @@ public class Rocket : MonoBehaviour
 
         }
        
-        if (Input.GetKey(KeyCode.S))  //TODO maybe add another key for Rocket Break
+        if (Input.GetKey(KeyCode.S)) 
         {
             rigidBody.AddRelativeForce(Vector3.up * -MainThrust * Time.deltaTime);
 
