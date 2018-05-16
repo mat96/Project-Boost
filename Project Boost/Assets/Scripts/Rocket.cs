@@ -9,10 +9,8 @@ public class Rocket : MonoBehaviour
     [SerializeField] float levelLoadDelay = 1f;
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip onDeath;
-    //[SerializeField] AudioClip success;
 
     [SerializeField] ParticleSystem mainEngineParticles;
-  //  [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem deathParticles;
 
   
@@ -151,19 +149,12 @@ public class Rocket : MonoBehaviour
 
     void DebugKeys()
     {
-        // Load next scene
-        if (Input.GetKey(KeyCode.L))
-        {
-            LoadNextScene();
-        }
+     
         if (Input.GetKeyDown(KeyCode.C))
         {
             collisionIsDisabled = !collisionIsDisabled;
             
         }
-
-
-
     }
 }
 
